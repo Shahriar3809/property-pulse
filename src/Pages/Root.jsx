@@ -5,7 +5,7 @@ import Navbar from '../Components/Navbar';
 
 const Root = () => {
     return (
-      <div>
+      <div className='max-w-[1170px] mx-auto p-5'>
         <Navbar></Navbar>
         <Outlet></Outlet>
         <ToastContainer />
