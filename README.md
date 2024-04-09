@@ -9,3 +9,5 @@ Currently, two official plugins are available:
 
 
 <!-- React Hook -->
+<!-- React Icons -->
+<!-- React  Prop type -->

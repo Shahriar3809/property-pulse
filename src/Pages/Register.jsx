@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser, setUser } = useContext(AuthContext);
-
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -14,8 +16,13 @@ const Register = () => {
 
   const onSubmit = (data) => {
     const { email, password } = data;
+
    createUser(email, password)
-   .then(result=> setUser(result.user))
+   .then(result=> {
+    setUser(result.user);
+    toast.success("Account Created successfully.");
+    navigate('/')
+   })
    .catch(err => console.log(err))
   };
 
@@ -73,7 +80,8 @@ const Register = () => {
                   required: true,
                   pattern: {
                     value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-                    message: "Password must be in one uppercase, one lowercase letters and at least 6 character",
+                    message:
+                      "Password must be in one uppercase, one lowercase letters and at least 6 character",
                   },
                 })}
                 type="password"
@@ -94,6 +102,11 @@ const Register = () => {
               <button className="btn btn-primary">Register</button>
             </div>
           </form>
+          <div>
+            <p className="text-center pb-8 text-xl">
+              Already have an account? Please <Link className="font-bold text-blue-500 underline" to={`/login`}>Login</Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>
