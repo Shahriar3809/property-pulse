@@ -1,11 +1,26 @@
 import { useContext } from "react";
 import {  NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-
+import { toast } from "react-toastify";
 
 const Navbar = () => {
-    const {user} = useContext(AuthContext)
-    console.log(user)
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+      logOut()
+      .then((result)=> {
+        console.log(result)
+        toast.success('Sign Out Successful')
+      })
+      .catch(error=> {
+        console.log(error.message)
+        toast.error('Something went wrong')
+      })
+    }
+
+
+
+
     const navLink = (
       <>
         <li>
@@ -50,25 +65,31 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end">
-         {
-            user ? <> <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
-            </div>
-          </div>
-          <a className="btn ">Sign Out</a></> : <>
-            <button className="btn btn-ghost">Login</button>
-          </>
-         }
+          {user ? (
+            <>
+              {" "}
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                </div>
+              </div>
+              <a onClick={handleLogOut} className="btn ">
+                Sign Out
+              </a>
+            </>
+          ) : (
+            <>
+              <button className="btn btn-ghost">Login</button>
+            </>
+          )}
         </div>
-        
       </div>
     );
 };

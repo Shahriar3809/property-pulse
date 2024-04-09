@@ -17,7 +17,7 @@ const Login = () => {
         .then(result=> {
             setUser(result.user)
             event.target.reset()
-
+            toast.success("Successfully logged in");
         })
         .catch(error => {
             console.log(error.message)
@@ -31,6 +31,7 @@ const Login = () => {
         googleLogin()
         .then(result=> {
             setUser(result.user)
+            toast.success("Successfully logged in");
         })
         .catch(error=> {
             console.log(error.message)
@@ -45,6 +46,7 @@ const Login = () => {
       githubLogin()
         .then((result) => {
           setUser(result.user);
+          toast.success('Successfully logged in')
         })
         .catch((error) => {
           console.log(error.message);
