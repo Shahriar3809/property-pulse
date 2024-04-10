@@ -3,6 +3,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser, setUser } = useContext(AuthContext);
@@ -15,15 +16,31 @@ const Register = () => {
 
 
   const onSubmit = (data) => {
-    const { email, password } = data;
+    const { email, name, photo, password } = data;
+    console.log(data)
 
    createUser(email, password)
    .then(result=> {
     setUser(result.user);
     toast.success("Account Created successfully.");
     navigate('/')
+
+    // Update Profile while registration
+      updateProfile(result.user, {
+        displayName: name,
+        photoURL: photo,
+      })
+      .then(res=> {
+        console.log(res, "Successfully Update")
+      })
+      .catch(err=> {
+        console.log(err)
+      })
+
    })
-   .catch(err => console.log(err))
+   .catch(() => {
+    toast.error('Email already Exist')
+   })
   };
 
   return (
