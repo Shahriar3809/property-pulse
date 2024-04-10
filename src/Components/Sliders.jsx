@@ -8,42 +8,32 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 const Sliders = () => {
   return (
     <>
-      <Swiper 
-      navigation={true} 
-      slidesPerView={1}
-      modules={[Navigation, Autoplay, Pagination]} 
-      loop={true}
-      pagination={
-        {
-            clickable: true,
-        }
-      }
-      autoplay={
-        {
-            delay: 2000,
-
-        }
-      }
+      <Swiper
+        navigation={true}
+        slidesPerView={1}
+        modules={[Navigation, Autoplay, Pagination]}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 3000,
+        }}
       >
         <SwiperSlide>
-          <div className="bg-[url('https://i.ibb.co/GQJT84x/real-estate-json-object-demo.png?fbclid=IwAR19mpxSr6IK4XZ3BLX6k-hqGIW9uiwhaZek9n0TzyjxLjI8FiHO9LksqTg_aem_AYj5ilT4E_s17jWTPgPhZOGKfaSMZx0Xyl29Oxmm2gRLNWNt1JJWMmaSvXzMHLjDR_EDmpzbzYSBx-FQO_6TrgYj')] text-blue-500 flex justify-center w-full h-[90vh] bg-center bg-no-repeat bg-green-300">
-            <p>Slide 1</p>
-          </div>
+          <div className="bg-[url('https://i.ibb.co/7rRJCcB/francesca-tosolini-Xc-Vm8mn7-NUM-unsplash.jpg')] text-blue-500 flex justify-center h-[60vh] md:h-[70vh] w-full lg:h-[70vh] bg-cover bg-center bg-no-repeat bg-green-300"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-blue-500 flex justify-center w-full h-[90vh] bg-center bg-no-repeat bg-green-300">
-            <p>Slide 2</p>
-          </div>
+          <div className="bg-[url('https://i.ibb.co/ZHLG7hY/digital-marketing-agency-ntwrk-g39p1k-Djv-SY-unsplash.jpg')] text-blue-500 flex justify-center h-[60vh] md:h-[70vh] w-full lg:h-[70vh] bg-cover bg-center bg-no-repeat bg-green-300"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-blue-500 flex justify-center w-full h-[90vh] bg-center bg-no-repeat bg-green-300">
-            <p>Slide 3</p>
-          </div>
+          <div className="bg-[url('https://i.ibb.co/G0cHmGB/bailey-anselme-Bkp3g-Lygye-A-unsplash.jpg')] text-blue-500 flex justify-center w-full lg:h-[70vh] h-[60vh] md:h-[70vh] bg-cover bg-center bg-no-repeat bg-green-300"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-blue-500  flex justify-center w-full h-[90vh] bg-center bg-no-repeat bg-green-300">
-            <p>Slide 4</p>
-          </div>
+          <div className="bg-[url('https://i.ibb.co/5Rc71sp/webaliser-TPTXZd9m-Oo-unsplash.jpg')] text-blue-500 flex justify-center w-full lg:h-[70vh] h-[60vh] md:h-[70vh] bg-cover bg-center bg-no-repeat bg-green-300"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="bg-[url('https://i.ibb.co/thvFtrx/ronnie-george-9g-Gv-NWBe-Oq4-unsplash.jpg')] text-blue-500 flex justify-center w-full h-[60vh] md:h-[70vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat bg-green-300"></div>
         </SwiperSlide>
       </Swiper>
     </>

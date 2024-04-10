@@ -1,0 +1,106 @@
+{
+  "residential_properties": [
+    {
+      "id": "001",
+      "segment_name": "Single Family Home",
+      "estate_title": "Spacious Family Home with a Garden",
+      "description": "A detached house designed for one family, featuring a spacious garden.",
+      "price": 350000,
+      "status": "For Sale",
+      "image_url": "https://i.ibb.co/51L2P9Y/frames-for-your-heart-Mye-On-Gcib-CQ-unsplash.jpg",
+      "location": {
+        "address": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zipcode": "12345"
+      },
+      "area": "2500 sqft",
+      "facilities": ["Backyard", "Garage", "Multiple Bedrooms", "Multiple Bathrooms"]
+    },
+    {
+      "id": "002",
+      "segment_name": "Townhouse",
+      "estate_title": "Modern Townhouse in a Cozy Neighborhood",
+      "description": "A multi-level home connected to other similar units, located in a friendly neighborhood.",
+      "price": 250000,
+      "status": "For Sale",
+      "image_url": "https://i.ibb.co/JkNMp11/terrah-holly-pmhdkg-RCbt-E-unsplash.jpg",
+      "location": {
+        "address": "456 Elm St",
+        "city": "Anycity",
+        "state": "NY",
+        "zipcode": "54321"
+      },
+      "area": "1800 sqft",
+      "facilities": ["Shared Wall", "Backyard", "Community Pool"]
+    },
+    {
+      "id": "003",
+      "segment_name": "Apartment",
+      "estate_title": "Luxury Apartment with Stunning Views",
+      "description": "A unit within a larger building containing multiple units, offering luxury amenities and breathtaking views.",
+      "price": 1500,
+      "status": "For Rent",
+      "image_url": "https://i.ibb.co/mCBbYXq/house-1867187-1280.jpg",
+      "location": {
+        "address": "789 Oak St",
+        "city": "Anothercity",
+        "state": "TX",
+        "zipcode": "67890"
+      },
+      "area": "1000 sqft",
+      "facilities": ["On-site Laundry", "Balcony", "Fitness Center"]
+    },
+    {
+      "id": "004",
+      "segment_name": "Student Housing",
+      "estate_title": "Student Apartments Close to University Campus",
+      "description": "Housing specifically designed for students, conveniently located near the university campus.",
+      "price": 800,
+      "status": "For Rent",
+      "image_url": "https://i.ibb.co/DrQQzb6/happy-woman-background-new-house-portrait-first-time-buyer-house-owner-apartment-renter-flat-tenant.jpg",
+      "location": {
+        "address": "101 University Ave",
+        "city": "College Town",
+        "state": "FL",
+        "zipcode": "54321"
+      },
+      "area": "600 sqft",
+      "facilities": ["Furnished", "Utilities Included", "Study Areas"]
+    },
+    {
+      "id": "005",
+      "segment_name": "Senior Living Community",
+      "estate_title": "Retirement Community with Comprehensive Care",
+      "description": "A community designed for older adults, offering comprehensive care and recreational amenities.",
+      "price": 3000,
+      "status": "For Rent",
+      "image_url": "https://i.ibb.co/gd5h3rG/low-angle-smiley-senior-couple-with-coffee-cups.jpg",
+      "location": {
+        "address": "321 Maple St",
+        "city": "Retirement City",
+        "state": "AZ",
+        "zipcode": "98765"
+      },
+      "area": "1200 sqft",
+      "facilities": ["Assisted Living", "Meal Services", "Community Events"]
+    },
+    {
+      "id": "006",
+      "segment_name": "Vacation Rental",
+      "estate_title": "Beachfront Villa for Your Perfect Getaway",
+      "description": "Short-term rental property for vacationers, offering stunning ocean views and luxurious amenities.",
+      "price": 200,
+      "status": "For Rent",
+      "image_url": "https://i.ibb.co/5Rc71sp/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+      "location": {
+        "address": "789 Beach Blvd",
+        "city": "Vacation Town",
+        "state": "CA",
+        "zipcode": "54321"
+      },
+      "area": "2000 sqft",
+      "facilities": ["Ocean View", "Hot Tub", "BBQ Grill"]
+    }
+  ]
+}

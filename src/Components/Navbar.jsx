@@ -24,12 +24,22 @@ const Navbar = () => {
     const navLink = (
       <>
         <li>
-          <NavLink to='/'>Home</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to='/login'>Login</NavLink>
+          <NavLink to="/login">Login</NavLink>
         </li>
-       
+
+        {user && (
+          <>
+            <li>
+              <NavLink to="/update_profile">Update Profile</NavLink>
+            </li>
+            <li>
+              <NavLink to="/user_profile">User Profile</NavLink>
+            </li>
+          </>
+        )}
       </>
     );
     return (

@@ -62,7 +62,7 @@ const Login = () => {
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6"></p>
           </div>
-          <div className="card shrink-0 w-full md:w-[400px] shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full min-w-[350px] md:w-[400px] shadow-2xl bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -99,7 +99,7 @@ const Login = () => {
               </div>
             </form>
 
-            <div className="flex justify-around mb-5">
+            <div className="flex flex-col md:flex-row mx-8 gap-3 md:mx-0 md:gap-0 justify-around mb-5">
               <button
                 onClick={handleGoogleLogin}
                 className="btn btn-success text-white font-bold"
