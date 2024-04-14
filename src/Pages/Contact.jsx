@@ -4,8 +4,8 @@ import { IoMdCall } from "react-icons/io";
 const Contact = () => {
   return (
     <>
-      <div className="flex justify-around bg-base-200 p-20 rounded-md">
-        <div className="bg-blue-600 rounded-lg text-white p-8 flex flex-col gap-3 items-center">
+      <div className="flex flex-col md:flex-row justify-around bg-base-200 p-5 md:p-20 gap-3 rounded-md">
+        <div className="bg-blue-600 rounded-lg text-white p-8 flex flex-col  gap-3 items-center">
           <FaLocationDot className="text-4xl" />
           <h2 className="text-3xl font-bold">Our Address</h2>
           <p className="text-xl font-semibold ">
