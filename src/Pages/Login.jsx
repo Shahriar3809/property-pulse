@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
-import { FaGoogle, FaGithub } from "react-icons/fa";
+import { FaGoogle, FaRegEye, FaGithub, FaRegEyeSlash  } from "react-icons/fa";
 
 const Login = () => {
 
     const { loginUser, setUser, googleLogin, githubLogin } =
       useContext(AuthContext);
+
+      const [show, setShow] = useState(true);
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -80,13 +82,18 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={show ? "password" : "text"}
+                    name="password"
+                    placeholder="password"
+                    className="input input-bordered w-full"
+                    required
+                  />
+                  <div onClick={()=> {setShow(!show)}} className="absolute right-3 top-4 text-xl">
+                    {show ? <FaRegEye /> : <FaRegEyeSlash />}
+                  </div>
+                </div>
 
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">

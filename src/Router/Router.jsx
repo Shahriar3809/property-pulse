@@ -4,8 +4,10 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import UpdateProfile from "../Pages/UpdateProfile";
-import UserProfile from "../Pages/UserProfile";
+
 import ErrorPage from "../Pages/ErrorPage";
+import PrivateRoutes from "../Components/PrivateRoutes";
+import Contact from "../Pages/Contact";
 
 
 const router = createBrowserRouter([
@@ -28,12 +30,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/update_profile",
-        element: <UpdateProfile></UpdateProfile>
+        element: (
+          <PrivateRoutes>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoutes>
+        ),
       },
       {
-        path: "/user_profile",
-        element: <UserProfile></UserProfile>
-      },
+        path: '/contact',
+        element: <Contact></Contact>
+      }
     ],
   },
 ]);

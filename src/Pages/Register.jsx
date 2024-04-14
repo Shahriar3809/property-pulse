@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { updateProfile } from "firebase/auth";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const { createUser, setUser } = useContext(AuthContext);
   const navigate = useNavigate()
+  const [show, setShow] = useState(true);
   const {
     register,
     handleSubmit,
@@ -92,20 +94,31 @@ const Register = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input
-                {...register("password", {
-                  required: true,
-                  pattern: {
-                    value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-                    message:
-                      "Password must be in one uppercase, one lowercase letters and at least 6 character",
-                  },
-                })}
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered"
-              />
+
+              <div className="relative">
+                <input
+                  {...register("password", {
+                    required: true,
+                    pattern: {
+                      value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                      message:
+                        "Password must be in one uppercase, one lowercase letters and at least 6 character",
+                    },
+                  })}
+                  type={show ? "password" : "text"}
+                  name="password"
+                  placeholder="password"
+                  className="input input-bordered w-full"
+                />
+                <div
+                  onClick={() => {
+                    setShow(!show);
+                  }}
+                  className="absolute right-3 top-4 text-xl"
+                >
+                  {show ? <FaRegEye /> : <FaRegEyeSlash />}
+                </div>
+              </div>
               {errors.password && (
                 <span className="text-red-500">{errors.password.message}</span>
               )}
@@ -121,7 +134,10 @@ const Register = () => {
           </form>
           <div>
             <p className="text-center pb-8 text-xl">
-              Already have an account? Please <Link className="font-bold text-blue-500 underline" to={`/login`}>Login</Link>
+              Already have an account? Please{" "}
+              <Link className="font-bold text-blue-500 underline" to={`/login`}>
+                Login
+              </Link>
             </p>
           </div>
         </div>
