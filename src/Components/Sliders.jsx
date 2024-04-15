@@ -21,7 +21,7 @@ const Sliders = () => {
         }}
       >
         <SwiperSlide>
-          <div className="bg-[url('https://i.ibb.co/7rRJCcB/francesca-tosolini-Xc-Vm8mn7-NUM-unsplash.jpg')] text-blue-500 flex justify-center h-[60vh] md:h-[70vh] w-full lg:h-[70vh] bg-cover bg-center bg-no-repeat bg-green-300"></div>
+          <div className="bg-[url('https://i.ibb.co/7rRJCcB/francesca-tosolini-Xc-Vm8mn7-NUM-unsplash.jpg')] text-blue-500 flex justify-center h-[60vh] md:h-[70vh] w-full lg:h-[70vh] bg-cover bg-center bg-no-repeat "></div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="bg-[url('https://i.ibb.co/ZHLG7hY/digital-marketing-agency-ntwrk-g39p1k-Djv-SY-unsplash.jpg')] text-blue-500 flex justify-center h-[60vh] md:h-[70vh] w-full lg:h-[70vh] bg-cover bg-center bg-no-repeat bg-green-300"></div>

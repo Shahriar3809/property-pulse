@@ -1,106 +1,104 @@
-{
-  "residential_properties": [
-    {
-      "id": "001",
-      "segment_name": "Single Family Home",
-      "estate_title": "Spacious Family Home with a Garden",
-      "description": "A detached house designed for one family, featuring a spacious garden.",
-      "price": 350000,
-      "status": "For Sale",
-      "image_url": "https://i.ibb.co/51L2P9Y/frames-for-your-heart-Mye-On-Gcib-CQ-unsplash.jpg",
-      "location": {
-        "address": "123 Main St",
-        "city": "Anytown",
-        "state": "CA",
-        "zipcode": "12345"
-      },
-      "area": "2500 sqft",
-      "facilities": ["Backyard", "Garage", "Multiple Bedrooms", "Multiple Bathrooms"]
+[
+  {
+    "id": "001",
+    "segment_name": "Single Family Home",
+    "estate_title": "Spacious Family Home with a Garden",
+    "description": "Nestled in the heart of Anytown, California, this spacious single-family home offers a tranquil retreat for families. Boasting 2500 square feet of living space, it features multiple bedrooms and bathrooms, ideal for comfortable living. The highlight of this property is its expansive garden, providing ample space for outdoor activities and relaxation. With a detached garage for convenient parking and storage, this home is perfect for those seeking a blend of comfort and convenience. Priced at $350,000, it presents a rare opportunity to own a slice of suburban paradise.",
+    "price": 350000,
+    "status": "For Sale",
+    "image_url": "https://i.ibb.co/51L2P9Y/frames-for-your-heart-Mye-On-Gcib-CQ-unsplash.jpg",
+    "location": {
+      "address": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zipcode": "12345"
     },
-    {
-      "id": "002",
-      "segment_name": "Townhouse",
-      "estate_title": "Modern Townhouse in a Cozy Neighborhood",
-      "description": "A multi-level home connected to other similar units, located in a friendly neighborhood.",
-      "price": 250000,
-      "status": "For Sale",
-      "image_url": "https://i.ibb.co/JkNMp11/terrah-holly-pmhdkg-RCbt-E-unsplash.jpg",
-      "location": {
-        "address": "456 Elm St",
-        "city": "Anycity",
-        "state": "NY",
-        "zipcode": "54321"
-      },
-      "area": "1800 sqft",
-      "facilities": ["Shared Wall", "Backyard", "Community Pool"]
+    "area": "2500 sqft",
+    "facilities": ["Backyard", "Garage", "Multiple Bedrooms", "Multiple Bathrooms"]
+  },
+  {
+    "id": "002",
+    "segment_name": "Townhouse",
+    "estate_title": "Modern Townhouse in a Cozy Neighborhood",
+    "description": "Discover modern living in this stylish townhouse located in the friendly neighborhood of Anycity, New York. Spread across multiple levels and covering 1800 square feet, this multi-level home offers a perfect blend of comfort and community. With shared walls, residents enjoy a sense of camaraderie while still maintaining privacy. Step outside to the backyard or take a dip in the community pool for relaxation and recreation. Priced attractively at $250,000, this townhouse is an excellent opportunity for those seeking contemporary urban living.",
+    "price": 250000,
+    "status": "For Sale",
+    "image_url": "https://i.ibb.co/JkNMp11/terrah-holly-pmhdkg-RCbt-E-unsplash.jpg",
+    "location": {
+      "address": "456 Elm St",
+      "city": "Anycity",
+      "state": "NY",
+      "zipcode": "54321"
     },
-    {
-      "id": "003",
-      "segment_name": "Apartment",
-      "estate_title": "Luxury Apartment with Stunning Views",
-      "description": "A unit within a larger building containing multiple units, offering luxury amenities and breathtaking views.",
-      "price": 1500,
-      "status": "For Rent",
-      "image_url": "https://i.ibb.co/mCBbYXq/house-1867187-1280.jpg",
-      "location": {
-        "address": "789 Oak St",
-        "city": "Anothercity",
-        "state": "TX",
-        "zipcode": "67890"
-      },
-      "area": "1000 sqft",
-      "facilities": ["On-site Laundry", "Balcony", "Fitness Center"]
+    "area": "1800 sqft",
+    "facilities": ["Shared Wall", "Backyard", "Community Pool"]
+  },
+  {
+    "id": "003",
+    "segment_name": "Apartment",
+    "estate_title": "Luxury Apartment with Stunning Views",
+    "description": "Indulge in luxury living with this exquisite apartment located in the vibrant city of Anothercity, Texas. Situated within a larger building, this unit offers 1000 square feet of opulent living space and boasts breathtaking views of the city skyline. Enjoy modern amenities such as on-site laundry, a private balcony, and access to a state-of-the-art fitness center. Priced at $1500 for rent, this apartment offers the epitome of urban sophistication and convenience.",
+    "price": 1500,
+    "status": "For Rent",
+    "image_url": "https://i.ibb.co/mCBbYXq/house-1867187-1280.jpg",
+    "location": {
+      "address": "789 Oak St",
+      "city": "Anothercity",
+      "state": "TX",
+      "zipcode": "67890"
     },
-    {
-      "id": "004",
-      "segment_name": "Student Housing",
-      "estate_title": "Student Apartments Close to University Campus",
-      "description": "Housing specifically designed for students, conveniently located near the university campus.",
-      "price": 800,
-      "status": "For Rent",
-      "image_url": "https://i.ibb.co/DrQQzb6/happy-woman-background-new-house-portrait-first-time-buyer-house-owner-apartment-renter-flat-tenant.jpg",
-      "location": {
-        "address": "101 University Ave",
-        "city": "College Town",
-        "state": "FL",
-        "zipcode": "54321"
-      },
-      "area": "600 sqft",
-      "facilities": ["Furnished", "Utilities Included", "Study Areas"]
+    "area": "1000 sqft",
+    "facilities": ["On-site Laundry", "Balcony", "Fitness Center"]
+  },
+  {
+    "id": "004",
+    "segment_name": "Student Housing",
+    "estate_title": "Student Apartments Close to University Campus",
+    "description": "Located in the vibrant College Town, Florida, these student apartments offer convenient living for academic pursuits. Specifically designed for students, these units come fully furnished with utilities included, allowing for a hassle-free living experience. With study areas and proximity to the university campus, these apartments are perfect for students seeking a conducive environment for learning and growth. Priced at $800 for rent, they provide affordable and comfortable living options.",
+    "price": 800,
+    "status": "For Rent",
+    "image_url": "https://i.ibb.co/DrQQzb6/happy-woman-background-new-house-portrait-first-time-buyer-house-owner-apartment-renter-flat-tenant.jpg",
+    "location": {
+      "address": "101 University Ave",
+      "city": "College Town",
+      "state": "FL",
+      "zipcode": "54321"
     },
-    {
-      "id": "005",
-      "segment_name": "Senior Living Community",
-      "estate_title": "Retirement Community with Comprehensive Care",
-      "description": "A community designed for older adults, offering comprehensive care and recreational amenities.",
-      "price": 3000,
-      "status": "For Rent",
-      "image_url": "https://i.ibb.co/gd5h3rG/low-angle-smiley-senior-couple-with-coffee-cups.jpg",
-      "location": {
-        "address": "321 Maple St",
-        "city": "Retirement City",
-        "state": "AZ",
-        "zipcode": "98765"
-      },
-      "area": "1200 sqft",
-      "facilities": ["Assisted Living", "Meal Services", "Community Events"]
+    "area": "600 sqft",
+    "facilities": ["Furnished", "Utilities Included", "Study Areas"]
+  },
+  {
+    "id": "005",
+    "segment_name": "Senior Living Community",
+    "estate_title": "Retirement Community with Comprehensive Care",
+    "description": "Experience a fulfilling retirement in the serene surroundings of Retirement City, Arizona. This senior living community offers comprehensive care and a plethora of recreational amenities for older adults. With assisted living services, meal provisions, and engaging community events, residents can enjoy a vibrant and supportive environment. Spanning 1200 square feet, these residences provide a comfortable and enriching lifestyle for retirees. Priced at $3000 for rent, this community ensures a fulfilling retirement experience.",
+    "price": 3000,
+    "status": "For Rent",
+    "image_url": "https://i.ibb.co/gd5h3rG/low-angle-smiley-senior-couple-with-coffee-cups.jpg",
+    "location": {
+      "address": "321 Maple St",
+      "city": "Retirement City",
+      "state": "AZ",
+      "zipcode": "98765"
     },
-    {
-      "id": "006",
-      "segment_name": "Vacation Rental",
-      "estate_title": "Beachfront Villa for Your Perfect Getaway",
-      "description": "Short-term rental property for vacationers, offering stunning ocean views and luxurious amenities.",
-      "price": 200,
-      "status": "For Rent",
-      "image_url": "https://i.ibb.co/5Rc71sp/webaliser-TPTXZd9m-Oo-unsplash.jpg",
-      "location": {
-        "address": "789 Beach Blvd",
-        "city": "Vacation Town",
-        "state": "CA",
-        "zipcode": "54321"
-      },
-      "area": "2000 sqft",
-      "facilities": ["Ocean View", "Hot Tub", "BBQ Grill"]
-    }
-  ]
-}
+    "area": "1200 sqft",
+    "facilities": ["Assisted Living", "Meal Services", "Community Events"]
+  },
+  {
+    "id": "006",
+    "segment_name": "Vacation Rental",
+    "estate_title": "Beachfront Villa for Your Perfect Getaway",
+    "description": "Escape to paradise with this luxurious beachfront villa located in Vacation Town, California. Offering stunning ocean views and lavish amenities, this short-term rental property promises the ultimate getaway experience. Spanning 2000 square feet, this villa features an ocean-view balcony, hot tub, and BBQ grill, perfect for outdoor entertaining. Priced at $200 for rent, this villa provides an unforgettable retreat for vacationers seeking relaxation and rejuvenation.",
+    "price": 200,
+    "status": "For Rent",
+    "image_url": "https://i.ibb.co/5Rc71sp/webaliser-TPTXZd9m-Oo-unsplash.jpg",
+    "location": {
+      "address": "789 Beach Blvd",
+      "city": "Vacation Town",
+      "state": "CA",
+      "zipcode": "54321"
+    },
+    "area": "2000 sqft",
+    "facilities": ["Ocean View", "Hot Tub", "BBQ Grill"]
+  }
+]
