@@ -15,9 +15,9 @@ const Home = () => {
           <h1 className="text-4xl underline text-orange-500 font-bold text-center">Estates</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {estateData.map((item) => (
+          {estateData ? estateData.map((item) => (
             <EstateCard key={item.id} item={item}></EstateCard>
-          ))}
+          )): ''}
         </div>
       </div>
     );

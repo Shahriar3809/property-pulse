@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const EstateCard = ({ item }) => {
-  console.log(item);
+//   console.log(item);
   const {
     id,
     image_url,
@@ -49,7 +49,7 @@ const EstateCard = ({ item }) => {
 };
 
 EstateCard.propTypes = {
-  item: PropTypes.node,
+  item: PropTypes.object,
 };
 
 export default EstateCard;
