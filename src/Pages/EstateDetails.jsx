@@ -1,6 +1,7 @@
 
 import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 const EstateDetails = () => {
@@ -26,18 +27,36 @@ const EstateDetails = () => {
     status,
 
     description} = singleData;
-    console.log(singleData)
+    // console.log(singleData)
+
+
+    // Local storage set
+      const handleAddToCart = (data) => {
+        const getItem = JSON.parse(localStorage.getItem('carted')) || []
+        const existData = getItem.find((item)=> item.id == data.id)
+        if(!existData) {
+          getItem.push(data)
+          localStorage.setItem('carted', JSON.stringify(getItem))
+          toast.success('Added to Cart List')
+        } else {
+          toast.error('Already Added');
+        }
+      }
+
+
+
+
     return (
       <div className="p-3">
         <div className="border p-4 md:p-10 bg-gray-100 shadow-2xl space-y-10">
           <h1 className="text-2xl md:text-4xl lg:text-5xl text-violet-700 font-bold text-center">
             {estate_title}
           </h1>
-          <div>
-            <p className="text-center py-1 font-semibold text-2xl border bg-green-500 text-white">
+          <div className="flex justify-between">
+            <p className="text-center px-10 py-2 font-semibold text-2xl border bg-green-500 text-white">
               {segment_name}
             </p>
-            <p className="text-center py-1 font-semibold text-2xl border bg-violet-500 text-white">
+            <p className="text-center px-10 py-2  font-semibold text-2xl border bg-red-500 text-white">
               {status}
             </p>
           </div>
@@ -55,7 +74,9 @@ const EstateDetails = () => {
             <p className="text-2xl font-bold">Facilities: </p>
             {facilities
               ? facilities.map((item, index) => (
-                  <span className="text-xl text-violet-600" key={index}>{item}, </span>
+                  <span className="text-xl text-violet-600" key={index}>
+                    {item},{" "}
+                  </span>
                 ))
               : ""}
           </div>
@@ -72,7 +93,12 @@ const EstateDetails = () => {
             <p className="text-2xl font-bold border md:w-3/12 text-center bg-violet-600 text-white p-3 rounded-xl">
               Price: $ {price}
             </p>
-            <button className="text-2xl font-bold border md:w-3/12 text-center bg-green-600 text-white p-3 rounded-xl">
+            <button
+              onClick={() => {
+                handleAddToCart(singleData);
+              }}
+              className="text-2xl font-bold border md:w-3/12 text-center bg-green-600 text-white p-3 rounded-xl"
+            >
               Add to Cart
             </button>
           </div>

@@ -10,6 +10,7 @@ import PrivateRoutes from "../Components/PrivateRoutes";
 
 import EstateDetails from "../Pages/EstateDetails";
 import MyProfile from "../Pages/MyProfile";
+import CartItem from "../Pages/CartItem";
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
+      {
+        path: '/cart_item',
+        element: <PrivateRoutes><CartItem></CartItem></PrivateRoutes>
+      },
+
       {
         path: "/update_profile",
         element: (
