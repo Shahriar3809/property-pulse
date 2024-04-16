@@ -4,10 +4,11 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { updateProfile } from "firebase/auth";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, setUser } = useContext(AuthContext);
+  const { createUser, setUser, googleLogin, githubLogin } =
+    useContext(AuthContext);
   const navigate = useNavigate()
   const [show, setShow] = useState(true);
   const {
@@ -44,6 +45,30 @@ const Register = () => {
     toast.error('Email already Exist')
    })
   };
+
+     const handleGoogleLogin = () => {
+       googleLogin()
+         .then((result) => {
+           setUser(result.user);
+           toast.success("Successfully logged in");
+         })
+         .catch((error) => {
+           console.log(error.message);
+           toast.error("Something went wrong");
+         });
+     };
+
+     const handleGithubLogin = () => {
+       githubLogin()
+         .then((result) => {
+           setUser(result.user);
+           toast.success("Successfully logged in");
+         })
+         .catch((error) => {
+           console.log(error.message);
+           toast.error("Something went wrong");
+         });
+     };
 
   return (
     <div className="hero">
@@ -132,6 +157,22 @@ const Register = () => {
               <button className="btn btn-primary">Register</button>
             </div>
           </form>
+          <div className="flex flex-col md:flex-row mx-8 gap-3 md:mx-0 md:gap-0 justify-around mb-5">
+            <button
+              onClick={handleGoogleLogin}
+              className="btn btn-success text-white font-bold"
+            >
+              <FaGoogle className="text-xl" />
+              Google Login
+            </button>
+            <button
+              onClick={handleGithubLogin}
+              className="btn bg-violet-500 text-white font-bold"
+            >
+              <FaGithub className="text-xl" />
+              Github Login
+            </button>
+          </div>
           <div>
             <p className="text-center pb-8 text-xl">
               Already have an account? Please{" "}

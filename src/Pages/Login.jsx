@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaGoogle, FaRegEye, FaGithub, FaRegEyeSlash  } from "react-icons/fa";
@@ -10,6 +10,8 @@ const Login = () => {
       useContext(AuthContext);
 
       const [show, setShow] = useState(true);
+      const location = useLocation();
+      const navigate = useNavigate();
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -18,6 +20,7 @@ const Login = () => {
         loginUser(email, password)
         .then(result=> {
             setUser(result.user)
+            navigate(location?.state ? location.state : '/')
             event.target.reset()
             toast.success("Successfully logged in");
         })
@@ -33,6 +36,7 @@ const Login = () => {
         googleLogin()
         .then(result=> {
             setUser(result.user)
+            navigate(location?.state ? location.state : "/");
             toast.success("Successfully logged in");
         })
         .catch(error=> {
@@ -48,6 +52,7 @@ const Login = () => {
       githubLogin()
         .then((result) => {
           setUser(result.user);
+          navigate(location?.state ? location.state : "/");
           toast.success('Successfully logged in')
         })
         .catch((error) => {
