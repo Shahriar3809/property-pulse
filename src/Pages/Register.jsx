@@ -50,6 +50,7 @@ const Register = () => {
        googleLogin()
          .then((result) => {
            setUser(result.user);
+           navigate(location?.state ? location.state : "/");
            toast.success("Successfully logged in");
          })
          .catch((error) => {
@@ -62,6 +63,7 @@ const Register = () => {
        githubLogin()
          .then((result) => {
            setUser(result.user);
+           navigate(location?.state ? location.state : "/");
            toast.success("Successfully logged in");
          })
          .catch((error) => {

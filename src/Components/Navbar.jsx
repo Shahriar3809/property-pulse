@@ -27,19 +27,13 @@ const Navbar = () => {
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
-        <li>
-          <NavLink to="/login">Login</NavLink>
-        </li>
+       
 
         {user && (
           <>
             <li>
               <NavLink to="/update_profile">Update Profile</NavLink>
             </li>
-           <li>
-              <NavLink to="/contact">Contact</NavLink>
-
-           </li>
           </>
         )}
       </>
@@ -71,7 +65,7 @@ const Navbar = () => {
               {navLink}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl font-bold">Dream Estate</a>
+          <Link to='/' className="btn btn-ghost text-xl font-bold">Dream Estate</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>

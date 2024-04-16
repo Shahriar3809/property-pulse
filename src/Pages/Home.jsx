@@ -1,11 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Sliders from "../Components/Sliders";
 import EstateCard from "../Components/EstateCard";
+import Contact from "./Contact";
 
 
 const Home = () => {
     const estateData = useLoaderData();
-    console.log(estateData)
     return (
       <div>
         <div>
@@ -18,6 +18,10 @@ const Home = () => {
           {estateData ? estateData.map((item) => (
             <EstateCard key={item.id} item={item}></EstateCard>
           )): ''}
+        </div>
+        <div>
+          <h2 className="text-3xl md:text-5xl underline font-bold text-center pt-20 my-10">Contact Us</h2>
+          <Contact></Contact>
         </div>
       </div>
     );
