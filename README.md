@@ -4,11 +4,17 @@
 
 
 ## Package I used in this Project for the Challenges Task:
--AOS Package
--React Hook Form
--React Icons
--Swiper Slider
--React PropType
+
+- **AOS Package**
+
+- **React Hook Form**
+
+- **React Icons**
+
+- **Swiper Slider**
+
+- **PropTypes**
+
 
 ## Features and Characteristics:
 
