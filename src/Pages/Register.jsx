@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,6 +11,11 @@ const Register = () => {
     useContext(AuthContext);
   const navigate = useNavigate()
   const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    document.title = "Register || Dream Estate";
+  }, []);
+
   const {
     register,
     handleSubmit,

@@ -9,6 +9,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoutes from "../Components/PrivateRoutes";
 
 import EstateDetails from "../Pages/EstateDetails";
+import MyProfile from "../Pages/MyProfile";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
+        path: "/profile",
+        element: (
+          <PrivateRoutes>
+            <MyProfile></MyProfile>
+          </PrivateRoutes>
+        ),
+      },
+      {
         path: "/update_profile",
         element: (
           <PrivateRoutes>
@@ -38,7 +47,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
-      
+
       {
         path: "/estate_details/:id",
         loader: () => fetch("/realEstateData.json"),

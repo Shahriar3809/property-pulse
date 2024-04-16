@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
@@ -13,6 +13,9 @@ const Login = () => {
       const location = useLocation();
       const navigate = useNavigate();
 
+      useEffect(() => {
+        document.title = "Login || Dream Estate";
+      }, []);
     const handleLogin = (event) => {
         event.preventDefault()
         const email = event.target.email.value;

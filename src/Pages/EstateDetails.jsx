@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -7,16 +8,23 @@ const EstateDetails = () => {
     const allData = useLoaderData();
     const {id} = useParams()
 
+    useEffect(() => {
+      document.title = `Details of ${id} || Dream Estate`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const currentData = allData.filter(data => data.id == id)
     const singleData = currentData[0];
     const {
     image_url,
     estate_title,
     area,
+    facilities,
     location,
     price,
     segment_name,
     status,
+
     description} = singleData;
     console.log(singleData)
     return (
@@ -42,6 +50,14 @@ const EstateDetails = () => {
               {location.address}, {location.city}, {location.state},{" "}
               {location.zipcode}
             </p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold">Facilities: </p>
+            {facilities
+              ? facilities.map((item, index) => (
+                  <span className="text-xl text-violet-600" key={index}>{item}, </span>
+                ))
+              : ""}
           </div>
           <div>
             <img className="rounded-lg w-full" src={image_url} alt="" />

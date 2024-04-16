@@ -14,6 +14,7 @@ const EstateCard = ({ item }) => {
     segment_name,
     status,
     description,
+    facilities,
   } = item;
   return (
     <div className="card bg-base-100 shadow-xl">
@@ -37,6 +38,12 @@ const EstateCard = ({ item }) => {
         <div className="flex gap-3 font-bold p-2">
           <p className="text-green-500 pb-3">Area: {area}</p>
           <p className="text-orange-500 text-right">{location.city}</p>
+        </div>
+        <div>
+          <p className="text-xl font-bold">Facilities: </p>
+          {
+            facilities ? facilities.map((item, index) => <span key={index}>{item}, </span>) : ''
+          }
         </div>
         <div className="card-actions">
           <Link to={`/estate_details/${id}`} className="text-center bg-gray-700 w-full text-white p-3 rounded-lg">

@@ -2,10 +2,14 @@ import { useLoaderData } from "react-router-dom";
 import Sliders from "../Components/Sliders";
 import EstateCard from "../Components/EstateCard";
 import Contact from "./Contact";
+import { useEffect } from "react";
 
 
 const Home = () => {
     const estateData = useLoaderData();
+    useEffect(()=> {
+      document.title = "Home || Dream Estate"
+    },[])
     return (
       <div>
         <div>
