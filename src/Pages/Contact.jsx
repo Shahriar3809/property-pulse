@@ -4,7 +4,10 @@ import { IoMdCall } from "react-icons/io";
 const Contact = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-around bg-base-200 p-5 md:p-20 gap-3 rounded-md">
+      <div
+        data-aos="fade-right"
+        className="flex flex-col md:flex-row justify-around bg-base-200 p-5 md:p-20 gap-3 rounded-md"
+      >
         <div className="bg-gray-700 rounded-lg text-white p-8 flex flex-col  gap-3 items-center">
           <FaLocationDot className="text-4xl" />
           <h2 className="text-3xl font-bold">Our Address</h2>
@@ -27,7 +30,10 @@ const Contact = () => {
       <br />
       <br />
       <div>
-        <div className="flex flex-col justify-center gap-5 items-center">
+        <div
+          data-aos="fade-left"
+          className="flex flex-col justify-center gap-5 items-center"
+        >
           <h2 className="text-3xl text-center md:text-5xl underline text-gray-700 font-bold">
             Send Us a Message
           </h2>

@@ -18,7 +18,11 @@ const EstateCard = ({ item }) => {
     facilities,
   } = item;
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div
+      data-aos="fade-up"
+      
+      className="card bg-base-100 shadow-xl"
+    >
       <figure className="px-3 pt-10">
         <img src={image_url} alt="Shoes" className="rounded-xl" />
       </figure>
