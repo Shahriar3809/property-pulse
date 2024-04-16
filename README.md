@@ -1,6 +1,6 @@
 # Dream Estate Project
 
-**Live Site URL:** [https://b9a8-shahriar.netlify.app/](http)
+**Live Site URL:** [https://b9a9-estate-project.web.app/](https://b9a9-estate-project.web.app/)
 
 
 ## Package I used in this Project for the Challenges Task:
@@ -12,6 +12,8 @@
 - **React Icons**
 
 - **Swiper Slider**
+
+- **React Toastify**
 
 - **PropTypes**
 

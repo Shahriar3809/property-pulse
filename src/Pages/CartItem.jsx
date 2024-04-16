@@ -4,7 +4,9 @@ import LocalCard from "../Components/LocalCard";
 
 const CartItem = () => {
     const [item, setItem] = useState([])
-
+useEffect(() => {
+  document.title = "Cart || Dream Estate";
+}, []);
     useEffect(()=> {
         const getItem = JSON.parse(localStorage.getItem("carted"));
         setItem(getItem);
